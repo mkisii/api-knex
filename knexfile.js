@@ -28,7 +28,14 @@ module.exports = {
       password: process.env.DB_PASS
     },
   },
+  production: {
+    client: 'pg',
+    connection: {
+      database: process.env.DATABASE_URL
 
+    },
+
+  },
 
 
 
