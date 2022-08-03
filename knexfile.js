@@ -17,6 +17,16 @@ module.exports = {
       user: process.env.DB_USER,
       password: process.env.DB_PASS
     },
+
+  },
+
+  test: {
+    client: 'mysql2',
+    connection: {
+      database: process.env.DB_NAME_TEST,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASS
+    },
   },
 
 
