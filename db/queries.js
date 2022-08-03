@@ -19,7 +19,11 @@ module.exports = {
 
     // Update a product
     updateProduct: (productId, product) => {
-        return knex('products').where('id', productId).update(product, '*');
+        return knex('products').where('id', productId).update(product);
+    },
+
+    deleteProduct: (productId) => {
+        return knex('products').where('id', productId).del();
     }
 
 }

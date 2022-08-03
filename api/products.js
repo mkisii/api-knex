@@ -69,10 +69,11 @@ router.patch('/update/:productId', isValidId, (req, res, next) => {
 });
 
 router.delete('/delete/:productId', isValidId, (req, res, next) => {
-    queries.getProductById(req.params.productId).then(products => {
+    queries.deleteProduct(req.params.productId).then(products => {
 
         res.json({
-            productId: products
+            productId: products,
+            message: 'Product deleted successfully'
         });
     })
 
